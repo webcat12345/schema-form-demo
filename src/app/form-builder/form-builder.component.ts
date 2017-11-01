@@ -33,7 +33,9 @@ export class FormBuilderComponent implements OnInit {
     'required': ['email', 'password', 'rememberMe']
   };
 
-  myModel = {email: 'john.doe@example.com'};
+  myModel = {email: 'john.doe@example.com', password: 'password', rememberMe: true};
+
+  useMaterial = false;
 
   constructor(
     private formService: FormBuildService
@@ -50,6 +52,14 @@ export class FormBuilderComponent implements OnInit {
 
   resetData(): void {
     this.mySchema = null;
+  }
+
+  toggleTheme(e): void {
+    this.useMaterial = e.checked;
+  }
+
+  onValueChange(e): void {
+    this.myModel = e.value;
   }
 
 }

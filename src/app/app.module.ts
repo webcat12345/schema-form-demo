@@ -8,6 +8,8 @@ import { FormBuildService } from './core/services/form-build.service';
 
 import { AppComponent } from './app.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { MaWidgetRegistry } from './core/widgets/maWidgetRegistry';
+import { WidgetsModule } from './core/widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,11 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     BrowserAnimationsModule,
     BrowserModule,
     MaterialModule,
-    SchemaFormModule
+    SchemaFormModule,
+    WidgetsModule
   ],
   providers: [
-    {provide: WidgetRegistry, useClass: DefaultWidgetRegistry},
+    {provide: WidgetRegistry, useClass: MaWidgetRegistry},
     FormBuildService
   ],
   bootstrap: [AppComponent]

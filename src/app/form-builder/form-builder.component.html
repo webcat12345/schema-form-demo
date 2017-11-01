@@ -12,6 +12,11 @@
           <button type="button" class="btn btn-primary" (click)="generateForm(e_generateMethod.async_way)">Generate</button>
         </div>
 
+        <div class="result">
+          <p>Email : {{myModel.email}}</p>
+          <p>Password : {{myModel.password}}</p>
+          <p>RememberMe : {{myModel.rememberMe}}</p>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
@@ -19,11 +24,11 @@
     <mat-card>
       <mat-card-header>
         Generated Form
-        <mat-slide-toggle>material</mat-slide-toggle>
+        <mat-slide-toggle [checked]="useMaterial" (change)="toggleTheme($event)">material</mat-slide-toggle>
       </mat-card-header>
       <mat-card-content>
         <div class="form-wrapper" *ngIf="mySchema; else emptyContent">
-          <sf-form [schema]="mySchema"></sf-form>
+          <sf-form [schema]="mySchema" [model]="myModel" (onChange)="onValueChange($event)"></sf-form>
         </div>
 
         <ng-template #emptyContent>
