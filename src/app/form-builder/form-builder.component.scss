@@ -1,0 +1,39 @@
+.form-wrapper {
+  padding: 20px 20px 10px;
+  border: 1px solid #7b7b7b;
+  border-radius: 3px;
+}
+
+.feature-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-top: 1px solid #ddd;
+  //border-bottom: 1px solid #ddd;
+  p {
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+    margin: 0;
+  }
+}
+
+.mat-card-header {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  padding: 10px 10px;
+  mat-slide-toggle {
+    margin-left: 40px;
+  }
+}
+
+.footer-wrapper {
+  padding: 20px 20px;
+}
+
+span.footer-tip {
+  font-size: 12px;
+  color: #0c5460;
+  padding: 0 0 20px;
+}

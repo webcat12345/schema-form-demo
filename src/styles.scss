@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  padding-top: 5rem;
+  background-color: #7b7b7b;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}

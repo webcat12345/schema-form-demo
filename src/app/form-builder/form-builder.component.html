@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col">
+    <mat-card>
+      <mat-card-content class="row">
+        <div class="feature-wrapper">
+          <p>using normal way</p>
+          <button type="button" class="btn btn-primary" (click)="generateForm(e_generateMethod.normal_way)">Generate</button>
+        </div>
+
+        <div class="feature-wrapper">
+          <p>asynchronous way(1 sec delay)</p>
+          <button type="button" class="btn btn-primary" (click)="generateForm(e_generateMethod.async_way)">Generate</button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col">
+    <mat-card>
+      <mat-card-header>
+        Generated Form
+        <mat-slide-toggle>material</mat-slide-toggle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="form-wrapper" *ngIf="mySchema; else emptyContent">
+          <sf-form [schema]="mySchema"></sf-form>
+        </div>
+
+        <ng-template #emptyContent>
+          <div class="form-wrapper">
+            <h5>Nothing to show.</h5>
+          </div>
+        </ng-template>
+
+        <div class="tip">
+          <span class="footer-tip">ProTip! Please try to reset before generate a new form.</span>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <div class="footer-wrapper">
+          <button mat-raised-button color="warn" (click)="resetData()">Reset</button>
+        </div>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

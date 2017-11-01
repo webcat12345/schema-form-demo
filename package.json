@@ -8,6 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "build-demo": "ng build --prod --output-path docs --base-href schema-form-demo",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -23,6 +24,7 @@
     "@angular/platform-browser": "^4.4.6",
     "@angular/platform-browser-dynamic": "^4.4.6",
     "@angular/router": "^4.4.6",
+    "angular2-schema-form": "^1.0.1",
     "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.5.1",
     "hammerjs": "^2.0.8",
