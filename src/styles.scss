@@ -10,3 +10,10 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
+pre span {white-space: normal;}
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }

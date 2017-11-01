@@ -12,10 +12,14 @@
           <button type="button" class="btn btn-primary" (click)="generateForm(e_generateMethod.async_way)">Generate</button>
         </div>
 
-        <div class="result">
-          <p>Email : {{myModel.email}}</p>
-          <p>Password : {{myModel.password}}</p>
-          <p>RememberMe : {{myModel.rememberMe}}</p>
+        <div class="json-view">
+          <span>Model</span>
+          <pre [innerHtml]="myModel | prettyjson:3"></pre>
+        </div>
+
+        <div class="json-view">
+          <span>Schema</span>
+          <pre [innerHtml]="mySchema | prettyjson:3"></pre>
         </div>
       </mat-card-content>
     </mat-card>
@@ -39,6 +43,13 @@
 
         <div class="tip">
           <span class="footer-tip">ProTip! Please try to reset before generate a new form.</span>
+
+          <div class="result">
+            <p>Email : {{myModel.email}}</p>
+            <p>Password : {{myModel.password}}</p>
+            <p>RememberMe : {{myModel.rememberMe}}</p>
+          </div>
+
         </div>
       </mat-card-content>
       <mat-card-footer>

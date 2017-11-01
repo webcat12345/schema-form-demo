@@ -119,7 +119,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/core@^4.4.6":
+"@angular/core@^2.0.0 || ^4.0.0", "@angular/core@^4.4.6":
   version "4.4.6"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.4.6.tgz#13031fd10dcfe438875419b38f21120958bc2354"
   dependencies:
@@ -302,6 +302,12 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+angular2-prettyjson@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/angular2-prettyjson/-/angular2-prettyjson-2.0.5.tgz#cd37aec8d8d84d9afee5289162d26c5d1e776e9f"
+  dependencies:
+    "@angular/core" "^2.0.0 || ^4.0.0"
 
 angular2-schema-form@^1.0.1:
   version "1.0.1"

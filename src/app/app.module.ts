@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { JsonPipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from 'angular2-schema-form';
 import { MaterialModule } from './shared/material/material.module';
+import { PrettyJsonModule, SafeJsonPipe } from 'angular2-prettyjson';
 
 import { FormBuildService } from './core/services/form-build.service';
 
@@ -21,10 +23,12 @@ import { WidgetsModule } from './core/widgets/widgets.module';
     BrowserModule,
     MaterialModule,
     SchemaFormModule,
-    WidgetsModule
+    WidgetsModule,
+    PrettyJsonModule
   ],
   providers: [
     {provide: WidgetRegistry, useClass: MaWidgetRegistry},
+    {provide: JsonPipe, useClass: SafeJsonPipe},
     FormBuildService
   ],
   bootstrap: [AppComponent]
